@@ -101,16 +101,6 @@ public class MainActivity extends Activity {
 
         root.addView(space(12));
 
-        TextView setButton = bigButton("+  SET", RED_DARK, WHITE, dp(92), 27);
-        setButton.setOnClickListener(v -> {
-            sets++;
-            saveAndRefresh("Set +1");
-            haptic(v);
-        });
-        root.addView(setButton, fullWrap());
-
-        root.addView(space(12));
-
         TextView completeButton = outlinedButton("COMPLETE SET", RED, WHITE, dp(92), 27);
         completeButton.setOnClickListener(v -> {
             sets++;
@@ -119,6 +109,16 @@ public class MainActivity extends Activity {
             haptic(v);
         });
         root.addView(completeButton, fullWrap());
+
+        root.addView(space(12));
+
+        TextView setButton = bigButton("+  SET", RED_DARK, WHITE, dp(92), 27);
+        setButton.setOnClickListener(v -> {
+            sets++;
+            saveAndRefresh("Set +1");
+            haptic(v);
+        });
+        root.addView(setButton, fullWrap());
 
         root.addView(space(14));
 
